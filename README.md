@@ -7,6 +7,6 @@ our cimel is still working
 Usage
 -----
 
-    cimel-up 54
+    ruby cimel-up 54
   
 will exit successfuly if instrumetn 54 is reported, otherwise it will return with an error.
