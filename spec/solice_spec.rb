@@ -1,9 +1,15 @@
 require File.dirname(__FILE__) + '/../lib/solice.rb'
 
 describe Solice do
-  it 'checks for data' do
-    solice = Solice.new
+
+  let(:solice) { Solice.new }
+
+  it 'returns true for a present photometer' do
     solice.check(51).should be_true
+  end
+
+  it 'returns false for an absent photometer' do
+    solice.check(5000).should_not be_true
   end
   # context 'running from the comand line' do 
   #   context 'the sun photometer is sending data' do
