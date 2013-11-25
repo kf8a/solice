@@ -21,7 +21,11 @@ Main {
   def run
     solice = Solice.new
 
-    solice.check(params['number'].value)
+    if solice.check(params['number'].value)
+      p "ok"
+    else
+      p "not found"
+    end
   end
 
 }
